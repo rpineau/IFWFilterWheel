@@ -25,7 +25,7 @@
 #include "../../licensedinterfaces/serxinterface.h"
 #include "../../licensedinterfaces/sleeperinterface.h"
 
-#define PLUGIN_DEBUG 3
+// #define PLUGIN_DEBUG 3
 
 #define DRIVER_VERSION      1.0
 
