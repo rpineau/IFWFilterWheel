@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>X2FilterWheel</class>
+ <widget class="QDialog" name="X2FilterWheel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>554</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>320</width>
+    <height>554</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>320</width>
+    <height>554</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Xagyl Filter Wheel Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="X2Form" name="X2Form">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1024</width>
+       <height>1024</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>48</y>
+        <width>249</width>
+        <height>416</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Filter Wheel filter names</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>48</x>
+         <y>368</y>
+         <width>152</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save to filter wheel</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>48</x>
+         <y>32</y>
+         <width>152</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Home Wheel</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>104</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>104</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 1 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>136</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 2 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>168</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 3 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>200</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 4 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>232</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 5 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>264</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 6 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>296</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 7 name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>328</y>
+         <width>88</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter 8 name :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>136</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>168</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>200</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_5">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>232</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_6">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>264</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_7">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>296</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_8">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>328</y>
+         <width>113</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="geometry">
+        <rect>
+         <x>56</x>
+         <y>64</y>
+         <width>160</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Home on connect</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_RTI">
+      <property name="geometry">
+       <rect>
+        <x>72</x>
+        <y>16</y>
+        <width>133</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>© RTI-Zone.org, 2020</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonCancel">
+      <property name="geometry">
+       <rect>
+        <x>96</x>
+        <y>488</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonOK">
+      <property name="geometry">
+       <rect>
+        <x>184</x>
+        <y>488</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>OK</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>X2Form</class>
+   <extends>QFrame</extends>
+   <header>x2form.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
