@@ -550,6 +550,11 @@ int CIFW::getModel(std::string &sModel)
         case 'H':
             m_nNbSlot = 8;
             break;
+        case 'I':
+        case 'J':
+        case 'K':
+            m_nNbSlot = 9;
+            break;
         default :
             m_nNbSlot = 5;
             break;
