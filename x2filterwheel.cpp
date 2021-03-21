@@ -80,6 +80,7 @@ int X2FilterWheel::execModalSettingsDialog()
     if (NULL == (dx = uiutil.X2DX()))
         return ERR_POINTER;
 
+    X2MutexLocker ml(GetMutex());
     //Intialize the user interface
     if(m_bLinked) {
         dx->setEnabled("pushButton", true);
@@ -153,7 +154,6 @@ int X2FilterWheel::execModalSettingsDialog()
     bHomeOnConnect = m_IFW.getHomeOnConnect();
     dx->setChecked("checkBox", bHomeOnConnect?1:0);
 
-    X2MutexLocker ml(GetMutex());
 
     //Display the user interface
     m_bUiEnabled = true;
