@@ -35,7 +35,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Xagyl Filter Wheel Settings</string>
+   <string>Optec IFW Settings</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
