@@ -430,7 +430,7 @@ int CIFW::saveFilterNameToWheel()
     for(i=0; i<m_nNbSlot; i++) {
         memcpy(szCmd+(i*8), m_filterNames[i], 8);
     }
-    nbBytes = 7+(m_nNbSlot*8)+2;
+    nbBytes = (m_nNbSlot*8);
 
 #if defined PLUGIN_DEBUG && PLUGIN_DEBUG >= 2
     ltime = time(NULL);
@@ -505,6 +505,8 @@ int CIFW::getModel(std::string &sModel)
 {
     int nErr = 0;
     char szResp[SERIAL_BUFFER_SIZE];
+    int nNbFilters;
+    std::string sSize;
 
 #if defined PLUGIN_DEBUG && PLUGIN_DEBUG >= 2
     ltime = time(NULL);
@@ -522,7 +524,7 @@ int CIFW::getModel(std::string &sModel)
         return ERR_COMMANDINPROGRESS;
     }
 
-    
+    // get Wheel ID
     nErr = filterWheelCommand("WIDENT\r\n", strlen("WIDENT\r\n"), szResp, SERIAL_BUFFER_SIZE);
     if(nErr) {
 #if defined PLUGIN_DEBUG && PLUGIN_DEBUG >= 2
@@ -537,30 +539,56 @@ int CIFW::getModel(std::string &sModel)
     
     m_cWheelID = szResp[0];
     
+    // we need to know the length of the data for the filters to properly identify the wheel size and slot numbers
+    nErr = filterWheelCommand("WREAD\r\n", strlen("WREAD\r\n"), szResp, SERIAL_BUFFER_SIZE);
+    if(nErr) {
+#if defined PLUGIN_DEBUG && PLUGIN_DEBUG >= 2
+        ltime = time(NULL);
+        timestamp = asctime(localtime(&ltime));
+        timestamp[strlen(timestamp) - 1] = 0;
+        fprintf(Logfile, "[%s] [CIFW::getModel] Error Getting response from filterWheelCommand : %d\n", timestamp, nErr);
+        fflush(Logfile);
+#endif
+        return nErr;
+    }
+
+    m_nNbSlot = int(strlen(szResp))/8;
+
     switch(m_cWheelID) {
         case 'A':
         case 'B':
+            if(m_nNbSlot == 9)
+                sSize = "3\"";
+            else
+                sSize = "2\"";
+
         case 'C':
         case 'D':
         case 'E':
-            m_nNbSlot = 5;
+            if(m_nNbSlot == 6)
+                sSize = "3\"";
+            else
+                sSize = "2\"";
             break;
         case 'F':
         case 'G':
         case 'H':
-            m_nNbSlot = 8;
+            if(m_nNbSlot == 5)
+                sSize = "3\"";
+            else
+                sSize = "2\"";
             break;
         case 'I':
         case 'J':
         case 'K':
-            m_nNbSlot = 9;
+            sSize = "2\"";
             break;
         default :
-            m_nNbSlot = 5;
+            sSize = "2\"";
             break;
     }
 
-    sModel = std::string("IFW model ") + m_cWheelID + " " + std::to_string(m_nNbSlot) + " Slots";
+    sModel = std::string("IFW ") + sSize + std::string(" model ") + m_cWheelID + " " + std::to_string(m_nNbSlot) + " Slots";
     m_sModel.assign(sModel);
     
 #if defined PLUGIN_DEBUG && PLUGIN_DEBUG >= 2

@@ -91,7 +91,7 @@ protected:
     bool            m_bMoving;
     char            m_cWheelID;
     
-    char            m_filterNames[8][9];
+    char            m_filterNames[9][9]; // 9 slots max, 8 characters + 0x00
     bool            m_bFilterNameLoaded;
     bool            m_bHomeOnConnect;
     

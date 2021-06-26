@@ -119,6 +119,26 @@ int X2FilterWheel::execModalSettingsDialog()
                 dx->setEnabled("label_8",true);
                 m_IFW.getFilterName(7, sTmp);
                 dx->setText("lineEdit_8", sTmp.c_str());
+
+                dx->setEnabled("label_9",true);
+                m_IFW.getFilterName(8, sTmp);
+                dx->setText("lineEdit_9", sTmp.c_str());
+            }
+            else {
+                dx->setEnabled("label_5",false);
+                dx->setEnabled("lineEdit_5",false);
+
+                dx->setEnabled("label_6",false);
+                dx->setEnabled("lineEdit_6",false);
+
+                dx->setEnabled("label_7",false);
+                dx->setEnabled("lineEdit_7",false);
+
+                dx->setEnabled("label_8",false);
+                dx->setEnabled("lineEdit_8",false);
+
+                dx->setEnabled("label_9",false);
+                dx->setEnabled("lineEdit_9",false);
             }
         }
      }
@@ -149,6 +169,9 @@ int X2FilterWheel::execModalSettingsDialog()
 
         dx->setEnabled("label_8",false);
         dx->setEnabled("lineEdit_8",false);
+
+        dx->setEnabled("label_9",false);
+        dx->setEnabled("lineEdit_9",false);
    }
 
     bHomeOnConnect = m_IFW.getHomeOnConnect();
